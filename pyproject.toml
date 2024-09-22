@@ -56,6 +56,10 @@ test = []
 clean-unet = "clean_unet_inference:main"
 export-clean-unet = "clean_unet_inference:export"
 
+
+[tool.setuptools]
+package-data = {"clean_unet_inference" = []}
+
 [tool.setuptools.packages.find]
-include = ["clean_unet_inference"]
+include = ["clean_unet_inference/**/*.py"]
 exclude = ["data"]
