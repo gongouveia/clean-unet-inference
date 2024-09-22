@@ -40,8 +40,8 @@ jobs:
           python -m clean_unet_inference.export ./clean_unet_inference/data/configs/dns-large-full.json ./clean_unet_inference/data/checkpoint/dns-large-full-pretrained.pkl ./clean_unet_inference/data/onnx/dns-large-full.onnx
       - uses: actions/upload-artifact@v4
         with:
-          name: my-artifact
-          path: path/to/artifact/world.txt
+          name: ONNX Models
+          path: ./clean_unet_inference/data/onnx
       - name: Build Python package
         run: |
           python -m build
