@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "clean-unet-inference"
-dynamic = ["version"]
+version = "1.0.0-dev"
 description = "A Python package for audio denoising using CleanUNet with ONNX Runtime."
 readme = "README.md"
 requires-python = ">=3.8"
