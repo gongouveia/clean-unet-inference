@@ -1,0 +1,2 @@
+python -m clean_unet_inference.export ./clean_unet_inference/data/configs/dns-large-high.json ./clean_unet_inference/data/checkpoint/dns-large-high-pretrained.pkl ./clean_unet_inference/data/onnx/dns-large-high.onnx
+python -m clean_unet_inference.export ./clean_unet_inference/data/configs/dns-large-full.json ./clean_unet_inference/data/checkpoint/dns-large-full-pretrained.pkl ./clean_unet_inference/data/onnx/dns-large-full.onnx
