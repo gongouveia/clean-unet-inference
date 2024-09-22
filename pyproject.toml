@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools", "setuptools-scm"]
+requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 
@@ -56,10 +56,13 @@ test = []
 clean-unet = "clean_unet_inference:main"
 export-clean-unet = "clean_unet_inference:export"
 
-
 [tool.setuptools]
-package-data = {"clean_unet_inference" = []}
+include-package-data = false
 
 [tool.setuptools.packages.find]
-include = ["clean_unet_inference/**/*.py"]
-exclude = ["data"]
+include = ["clean_unet_inference"]
+exclude = ["*.onnx", "*.pkl"]
+namespaces = false
+
+[tool.setuptools.exclude-package-data]
+"*" = ["*.onnx", "*.pkl"]
