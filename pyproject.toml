@@ -56,10 +56,6 @@ test = []
 clean-unet = "clean_unet_inference:main"
 export-clean-unet = "clean_unet_inference:export"
 
-
-[tool.setuptools]
-package-data = {"clean_unet_inference" = ["**/*.onnx"]}
-
 [tool.setuptools.packages.find]
 include = ["clean_unet_inference"]
 exclude = ["data"]
